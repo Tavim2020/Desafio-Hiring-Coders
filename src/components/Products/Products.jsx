@@ -52,6 +52,10 @@ const DivProdutos = styled.div`
             height: 3vw;
         }
         div{
+            p{
+                margin: 0 auto;
+                text-align: center;
+            }
             p:nth-child(1){
                 margin-top: 1vw;
                 font-size: 1.2vw;
@@ -108,6 +112,7 @@ const DivProdutos = styled.div`
                 height: 7.05vw;
             }
             div{
+                
                 p:nth-child(1){
                     margin-top: 2vw;
                     font-size: 2.6vw;

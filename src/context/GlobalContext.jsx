@@ -8,6 +8,7 @@ export const GlobalStorage = ({children}) => {
     const [effectConfete, setEffectConfete] = React.useState(false);
     const [header, setHeader] = React.useState(true);
     const [footer, setFooter] = React.useState(true);
+    const FooterContainerForScroll = React.useRef(null);
 
 
     // Animação
@@ -134,7 +135,7 @@ export const GlobalStorage = ({children}) => {
             TimeOut5,
             TimeOut6,
             TimeOutPrincipal,
-
+            FooterContainerForScroll,
         }}>
             {children}
         </GlobalContext.Provider>

@@ -140,7 +140,7 @@ const FormCadastroEmail = () => {
                     <input type={'text'} id={'name'} 
                     placeholder={'Name...'}  minLength={'3'} maxLength={'35'} required
                     value={name.replace(/\d|[ ]/g, '')} onChange={(event) => setName(event.target.value)}/>
-                <p>Max Carcteres: {35 - name.length}</p>
+                <p>Max Caracteres: {35 - name.length}</p>
                 </div>
 
                 <div>
@@ -148,7 +148,7 @@ const FormCadastroEmail = () => {
                     <input type={'email'} id={'email'} 
                     placeholder={'Email...'} maxLength={'45'} minLength={'6'} required
                     value={email} onChange={(event) => setEmail(event.target.value)}/>
-                    <p>Max Carcteres: {45 - email.length}</p>
+                    <p>Max Caracteres: {45 - email.length}</p>
                 </div>
 
                 <div>
@@ -156,7 +156,7 @@ const FormCadastroEmail = () => {
                     <input type={'text'} id={'apelido'} 
                     placeholder={'Apelido...'} maxLength={'15'} 
                     value={apelido} onChange={(event) => setApelido(event.target.value)}/>
-                    <p>Max Carcteres: {15 - apelido.length}</p>
+                    <p>Max Caracteres: {15 - apelido.length}</p>
                 </div>
 
                 <button type={'submit'}>

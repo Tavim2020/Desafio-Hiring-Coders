@@ -43,21 +43,10 @@ const TitleContainer = styled.div`
 
 const Footer = () => {
 
-    const { stateMobile, stateMenuFlutuante, footer, setStateMenuFlutuante } = React.useContext(GlobalContext);
-    const FooterContainerForScroll = React.useRef(null);
+    const { stateMobile, FooterContainerForScroll } = React.useContext(GlobalContext);
+    
 
-    React.useEffect(()=>{
-        window.addEventListener('scroll', ()=>{
-            if(FooterContainerForScroll.current){
-                if(window.scrollY >= FooterContainerForScroll.current.offsetTop - 500){
-                    setStateMenuFlutuante(false);
-                }
-                else{
-                    setStateMenuFlutuante(true);
-                }
-            }
-        })
-    }, [stateMenuFlutuante, setStateMenuFlutuante, footer])
+   
 
     return (
         <FooterContainer ref={FooterContainerForScroll}>
