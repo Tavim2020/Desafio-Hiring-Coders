@@ -1,11 +1,36 @@
 import React from 'react';
+import { GlobalContext } from '../../context/GlobalContext';
 import ContainerCentral from '../Container/ContainerCentral';
 import Logo from '../Logo/Logo';
 import { HeaderContainer, DivTextAndCar } from './style/HeaderStyle';
+import CloseIcon from '../../assets/close.svg';
+import { Link } from 'react-router-dom';
 
 
 
 const Header = () => {
+
+    const { countCompras, car, setCountCompras, register, nameUser, 
+            carConfirm } = React.useContext(GlobalContext);
+    const [clickedCar, setClickedCar] = React.useState(false);
+   
+    function toggleCar(){
+        setClickedCar(!clickedCar);
+    }
+
+    const totalProducts = car.reduce((acc, produto) => acc + produto.price, 0);
+    const frete = countCompras * 15;
+
+    const total = totalProducts + frete;
+
+    function removeItemCar(event){
+        car.splice(event.target.id, 1);
+        setCountCompras(countCompras - 1);
+        if(countCompras === 1){
+            setClickedCar(false);
+        }
+    }
+   
     return (
         <HeaderContainer>
 
@@ -20,16 +45,16 @@ const Header = () => {
                 <DivTextAndCar>
 
                     <ul>
-                        <li>Login</li>
+                        <li>{register ? `Olá ${nameUser}` : 'Login'}</li>
 
                         <li>Register</li>
 
                     </ul>
 
-                    <div className={'car'}>
+                    <div className={'car'} >
 
                         <svg id="Capa_1"
-                        viewBox="0 0 19.25 19.25" >
+                        viewBox="0 0 19.25 19.25" onClick={toggleCar}>
                             <g>
                                 <g id="Layer_1_107_">
                                     <g>
@@ -48,8 +73,63 @@ const Header = () => {
                             </g>
                         </svg>
 
-                    </div>
+                            {countCompras >= 1 && (
+                                <div className={'carCount'} onClick={toggleCar}>
 
+                                <h5>{countCompras}</h5>
+
+                                </div>
+                            )}
+
+                        {countCompras >= 1 && clickedCar &&
+                            <div className={'compras'}>
+                                <div className={'divImg'} onClick={toggleCar}>
+                                    <img src={CloseIcon} alt={'Close'} />
+                                </div>
+
+                                {car.map((produto, index) => (
+                                    <div key={index} className={'listProducts'}>
+                                        <div className={'listImage'}>
+                                            <img src={produto.image} alt={produto.title} />
+                                        </div>
+
+                                        <div className={'NameAndPrice'}>
+
+                                            <h3>{produto.title}</h3>
+
+                                            <div>
+                                                <h4>Preço: R${produto.price.toFixed(2)}</h4>
+
+                                                <button onClick={removeItemCar} id={index}
+                                                disabled={!carConfirm ? false : true}>
+                                                    Remover
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                ))}
+
+                                <div className={'total'}>
+                                    <h3>Preço Total: <span>R${totalProducts.toFixed(2)} </span></h3>
+                                    <h3>Frete: <span>R${frete}</span></h3>
+
+                                    <h2>Total: <span> R${total.toFixed(2)}</span></h2>
+                                </div>
+
+
+                                <>
+                                    <Link to={'/checkout'}>
+                                    <div className={'checkOut'} onClick={toggleCar}>
+                                        CheckOut
+                                    </div>
+                                    </Link>
+                                </>
+
+                            </div>
+                        }
+
+                    </div>
 
                 </DivTextAndCar>
 

@@ -38,6 +38,34 @@ export const GlobalStorage = ({children}) => {
     // Page Promoções
     const [pagePromocoes, setPagePromocoes] = React.useState(false);
 
+    // Car
+    const [car, setCar] = React.useState([]);
+    const [countCompras, setCountCompras] = React.useState(0);
+
+
+    // Usuário Registro
+    const [nameUser, setNameUser] = React.useState('');
+    const [sobreNameUser, setSobreNameUser] = React.useState('');
+    const [telefoneUser, setTelefoneUser] = React.useState('');
+    const [emailUser, setEmailUser] = React.useState('');
+    const [enderecoUser, setEnderecoUser] = React.useState('');
+    const [bairroUser, setBairroUser] = React.useState('');
+    const [complementoUser, setComplementoUser] = React.useState('');
+    const [referenciaUser, setReferenciaUser] = React.useState('');
+    const [cidadeUser, setCidadeUser] = React.useState('');
+    const [estadoUser, setEstadoUser] = React.useState('');
+    const [cepUser, setCepUser] = React.useState('');
+    const [cpfUser, setCpfUser] = React.useState('');
+    const [rgUser, setRgUser] = React.useState('');
+
+    // Registro
+    const [register, setRegister] = React.useState(false);
+
+    // CheckOut
+    const [confirmDados, setConfirmDados] = React.useState(false);
+    const [carConfirm, setCarConfirm] = React.useState(false);
+
+
 
     React.useEffect(()=>{
         window.addEventListener('resize',()=>{
@@ -136,6 +164,41 @@ export const GlobalStorage = ({children}) => {
             TimeOut6,
             TimeOutPrincipal,
             FooterContainerForScroll,
+            car, 
+            setCar,
+            countCompras, 
+            setCountCompras,
+            nameUser, setNameUser,
+            sobreNameUser, 
+            setSobreNameUser,
+            telefoneUser, 
+            setTelefoneUser,
+            emailUser, 
+            setEmailUser,
+            enderecoUser, 
+            setEnderecoUser,
+            bairroUser, 
+            setBairroUser,
+            complementoUser, 
+            setComplementoUser,
+            referenciaUser, 
+            setReferenciaUser,
+            cidadeUser, 
+            setCidadeUser,
+            estadoUser,
+            setEstadoUser,
+            cepUser, 
+            setCepUser,
+            cpfUser, 
+            setCpfUser,
+            rgUser, 
+            setRgUser,
+            register, 
+            setRegister,
+            confirmDados, 
+            setConfirmDados,
+            carConfirm, 
+            setCarConfirm,
         }}>
             {children}
         </GlobalContext.Provider>
