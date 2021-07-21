@@ -108,6 +108,7 @@ export const FormDetailsContainer = styled.form`
             border: none;
             cursor: pointer;
             transition: background-color 0.5s;
+            font-size: 1.3vw;
 
             &:hover{
                 background-color: #588ec4fd;
@@ -126,5 +127,60 @@ export const FormDetailsContainer = styled.form`
             font-size: 1.2vw;
             color: red;
         }
+    }
+
+
+    @media(max-width: 960px){
+        width: ${({widthform}) => widthform ? `${widthform}` : '100%'};
+        margin-top: 7vw;
+
+        div{
+            display: block;
+            align-items: center;
+
+            label{
+                font-size: 3.4vw;
+                display: block;
+                text-align: center;
+                margin-bottom: 1vw;
+                margin-top: 2vw;
+            }
+            input:nth-child(1){
+                width: 100%;
+            }
+            >input{
+                margin-right: 0vw;
+            }
+            input{
+                width: 100% !important;
+                height: 7vw;
+                padding: 2vw;
+                letter-spacing: 0.1vw;
+                font-size: 3.3vw;
+                margin-left: 0vw;
+            }
+            margin-bottom: 2vw;
+        }
+
+        .containerButton{
+            height: 13vw;
+            margin-bottom: 3.5vw;
+
+            button{
+                width: 25vw;
+                height: 9vw;
+                margin-top: 2vw;
+                border-radius: 1.2vw;
+                font-size: 2.5vw;
+            }
+        }
+
+        .inform{
+            margin-bottom: 6vw;
+
+            h5{
+                font-size: 2.4vw;
+            }
+        } 
     }
 `

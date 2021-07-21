@@ -154,6 +154,7 @@ export const DivTextAndCar = styled.nav`
                     h3{
                         width: 100%;
                         font-size: 1.1vw;
+                        color: var(--dark-blue);
                     }
 
                     div{
@@ -165,6 +166,7 @@ export const DivTextAndCar = styled.nav`
                         h4{
                             font-size: 1vw;
                             font-weight: 400;
+                            color: var(--dark-blue);
                         }
 
                         button{
@@ -176,6 +178,7 @@ export const DivTextAndCar = styled.nav`
                             color: var(--white);
                             font-weight: bold;
                             transition: background-color 0.5s filter 0.5s;
+                            font-size: 1.1vw;
 
                             &:disabled{
                                 filter: brightness(0.6);
@@ -235,6 +238,7 @@ export const DivTextAndCar = styled.nav`
                 color: var(--white);
                 cursor: pointer;
                 transition: background-color 0.5s;
+                font-size: 1.3vw;
 
                 &:hover{
                     background-color: #588ec4fd;
@@ -244,11 +248,11 @@ export const DivTextAndCar = styled.nav`
     }
 
     @media(max-width: 960px){
-        width: 40%;
+        width: 65%;
 
         ul{
             li{
-                font-size: 3.5vw;
+                font-size: 3.3vw;
                 margin-left: 3vw;
             }
         }
@@ -265,6 +269,86 @@ export const DivTextAndCar = styled.nav`
                     font-size: 2.7vw;
                 }
             }
+            .compras{
+                width: 100.01vw;
+                top: 0%;
+                right: -93.7142%;
+                border-bottom: 0.4vw solid var(--dark-blue);
+    
+                .divImg{
+                    height: 8vw;
+                    padding-right: 5%;
+                    padding-top: 1vw;
+                    img{
+                        width: 6vw;
+                    }
+                }
+    
+                .listProducts{
+                    height: 27vw;
+    
+                    .listImage{
+                        padding-left: 7vw;
+    
+                        img{
+                            width: 16vw;
+                        }
+                    }
+    
+                    .NameAndPrice{
+                        padding-right: 5vw;
+    
+                        h3{
+                            font-size: 3.4vw;
+                            
+                        }
+    
+                        div{
+                            h4{
+                                font-size: 3.1vw;
+                            }
+    
+                            button{
+                                width: 21vw;
+                                padding-left: 1.5vw;
+                                padding-right: 1.5vw;
+                                padding-top: 1vw;
+                                padding-bottom: 1vw;
+                                font-size: 2.7vw;
+                            }
+                        }
+                    }
+                }
+    
+                .total{
+                    margin-top: 5vw;
+                    border-top: 0.4vw solid var(--dark-blue);
+                    padding-top: 2.5vw;
+                    h3{
+                        padding-bottom: 2.5vw;
+                        font-size: 3.2vw;
+                    }
+    
+                    h3:nth-child(2){
+                        border-bottom: 0.4vw solid var(--dark-blue);
+                    }
+    
+                    h2{
+                        font-size: 3.9vw;
+                        margin-bottom: 4vw;
+                        margin-top: 1vw;
+                    }
+                }
+    
+                .checkOut{
+                    width: 22vw;
+                    height: 8vw;
+                    margin-left: 73%;
+                    margin-bottom: 4vw;
+                    font-size: 3.2vw;
+                }
+            }
         }
+
     }
 `;

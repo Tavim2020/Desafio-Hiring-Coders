@@ -32,6 +32,21 @@ const TitleRegister = styled.div`
         width: 4vw;
         margin-left: 2vw;
     }
+
+
+    @media(max-width: 960px){
+        height: 13vw;
+        margin-top: 7vw;
+
+        h2{
+            font-size: 4.3vw;
+            text-align: center;
+        }
+
+        img{
+            width: 14vw;
+        }
+    }
 `;
 
 const ConfirmAll = styled.div`
@@ -58,6 +73,7 @@ const ConfirmAll = styled.div`
         font-weight: bold;
         transition: background-color 0.5s filter 0.5s;
         cursor: pointer;
+        font-size: 1.3vw;
 
         &:disabled{
             filter: brightness(0.6);
@@ -66,6 +82,25 @@ const ConfirmAll = styled.div`
         &:enabled:hover{
             background-color: #588ec4fd;
             filter: brightness(1);
+        }
+    }
+
+    @media(max-width: 960px){
+        width: 100%;
+        height: 18vw;
+        display: flex;
+        margin-bottom: 7vw;
+        margin-top: 7vw;
+
+        h5{
+            font-size: 2.7vw;
+            margin-bottom: 2.5vw;
+        }
+
+        button{
+            width: 30vw;
+            height: 9vw;
+            font-size: 2.5vw;
         }
     }
 

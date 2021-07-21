@@ -80,15 +80,18 @@ const ContainerChechedCar = styled.section`
             h3{
                 font-size: 2.1vw;
                 margin-bottom: 1vw;
+                color: var(--dark-blue);
             }
 
             div{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
                 h4{
                     font-size: 1.7vw;
                     font-weight: 400;
+                    color: var(--dark-blue);
                 }
 
                 button{
@@ -171,6 +174,119 @@ const ContainerChechedCar = styled.section`
 
             &:hover{
                 background-color: #588ec4fd;
+            }
+        }
+    }
+
+    @media(max-width: 960px){
+        .textCar{
+            height: 9vw;
+            justify-content: center;
+            margin-top: 7vw;
+
+            h2{
+                font-size: 4.2vw;
+            }
+
+            svg{
+                width: 7vw;
+            }
+        }
+
+        .notBuy{
+            height: 14vw;
+            margin-top: 6vw;
+
+            h4{
+                font-size: 3vw;
+                text-align: center;
+            }
+
+            h5{
+                font-size: 2.8vw;
+                margin-top: 2.5vw;
+
+                &:hover{
+                    font-size: 2.8vw;
+                }
+            }
+        }
+
+
+        .myProducts{
+            width: 100%;
+            height: 17vw;
+            margin-top: 8vw;
+            margin-bottom: 3vw;
+
+            .imageDiv{
+                width: 30%;
+
+                img{
+                    width: 17vw;
+                }
+            }
+
+            .titleAndPriceProducts{
+                h3{
+                    font-size: 3.8vw;
+                    margin-bottom: 2.5vw;
+                }
+
+                div{
+                    h4{
+                        font-size: 3vw;
+                    }
+
+                    button{
+                        width: 21vw;
+                        height: 7vw;
+                        padding-left: 1.5vw;
+                        padding-right: 1.5vw;
+                        padding-top: 1vw;
+                        padding-bottom: 1vw;
+                        font-size: 2.8vw;
+                    }
+                }
+
+            }
+
+        }
+
+        .total{
+            width: 80%;
+            margin-top: 14vw;
+
+            h3:nth-child(1){
+                border-top: 0.4vw solid var(--dark-blue);
+                margin-top: 2.5vw;
+                padding-top: 1.5vw;
+            }
+
+            h3{
+                font-size: 3.4vw;
+            }
+
+            h3:nth-child(2){
+                border-bottom: 0.4vw solid var(--dark-blue);
+                margin-bottom: 2.5vw;
+                padding-bottom: 1.5vw;
+                margin-top: 1.5vw;
+            }
+
+            h2{
+                font-size: 4.2vw;
+            }
+        }
+
+        .confirmMyCar{
+            height: 12vw;
+            margin-top: 5vw;
+
+            button{
+                width: 30vw;
+                height: 9vw;
+                font-size: 2.5vw;
             }
         }
     }

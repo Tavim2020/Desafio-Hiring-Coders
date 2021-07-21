@@ -14,6 +14,15 @@ const OrdemPayment = styled.div`
         color: var(--white);
         font-size: 2vw;
     }
+
+    @media(max-width: 960px){
+        width: 12vw;
+        height: 12vw;
+        margin-right: 0vw;
+        p{
+            font-size: 5.2vw;
+        }
+    }
 `;
 
 const DivOrdemPayment = ({children}) => {

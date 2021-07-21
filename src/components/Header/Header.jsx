@@ -47,7 +47,7 @@ const Header = () => {
                     <ul>
                         <li>{register ? `Olá ${nameUser}` : 'Login'}</li>
 
-                        <li>Register</li>
+                        {!register && <li>Register</li>}
 
                     </ul>
 
