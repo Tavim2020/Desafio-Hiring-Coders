@@ -162,7 +162,8 @@ color[15] = "black";
 
 const BlackFriday = () => {
 
-    const { setEffectConfete, effectConfete, stateMobile} = React.useContext(GlobalContext);
+    const { setEffectConfete, effectConfete, stateMobile, 
+            car, setCountCompras, countCompras} = React.useContext(GlobalContext);
     const TimeOut = React.useRef(null);
 
     
@@ -184,6 +185,20 @@ const BlackFriday = () => {
         }
 
     }, [setEffectConfete, effectConfete])
+
+    function buyCel(){
+        const cell = {
+            title: 'Smartphone Multilaser F Pro 16gb 1gb Android Dual Sim P9119',
+            price: 430.19,
+            description: 'Celular Multilaser Promoção',
+            category: 'Eletro Eletronicos',
+            id: 21,
+            image: `${Celular}`,
+        };
+
+        car.push(...car, cell);
+        setCountCompras(countCompras + 1)
+    }
 
     return (
         <BlackFridayContainer onMouseOver={confeteON}>
@@ -230,7 +245,7 @@ const BlackFriday = () => {
                     <h3>ou R$ 477,99 em 12x de R$ 39,83 sem juros</h3>
 
                     <div>
-                        <button>
+                        <button onClick={buyCel}>
                             Comprar
                         </button>
                     </div>

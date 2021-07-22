@@ -8,6 +8,7 @@ import DivOrdemPayment from '../components/DivOrdemPayment/DivOrdemPayment';
 import FormConfirmSendProducts from '../components/FormConfirmSendProducts/FormConfirmSendProducts';
 import CheckIcon from '../assets/check.png';
 import ContainerCarChecked from '../components/ContainerCarChecked/ContainerCarChecked';
+import { setCommentRange } from 'typescript';
 
 const ContainerChechOut = styled.main`
     width: 100vw;
@@ -110,7 +111,7 @@ const ConfirmAll = styled.div`
 const CheckOut = () => {
 
     const { setHeader, setFooter, setPagePromocoes, register, 
-        confirmDados, carConfirm, car} = React.useContext(GlobalContext);
+        confirmDados, carConfirm, car, setCar} = React.useContext(GlobalContext);
 
 
     
@@ -124,7 +125,11 @@ const CheckOut = () => {
     function purchaseCompleted(){
         window.localStorage.setItem('car', JSON.stringify(car));
 
-        alert('Muito obrigado sua compra já está armazenada junto com os dados obtidos. Ficamos muito felizes em ter você como cliente. =]')
+        alert('Muito obrigado sua compra já está armazenada junto com os dados obtidos. Ficamos muito felizes em ter você como cliente. =]');
+
+        setCar([]);
+
+        window.location.href = '/';
     }
 
     return (
