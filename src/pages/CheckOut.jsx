@@ -8,7 +8,6 @@ import DivOrdemPayment from '../components/DivOrdemPayment/DivOrdemPayment';
 import FormConfirmSendProducts from '../components/FormConfirmSendProducts/FormConfirmSendProducts';
 import CheckIcon from '../assets/check.png';
 import ContainerCarChecked from '../components/ContainerCarChecked/ContainerCarChecked';
-import { setCommentRange } from 'typescript';
 
 const ContainerChechOut = styled.main`
     width: 100vw;
