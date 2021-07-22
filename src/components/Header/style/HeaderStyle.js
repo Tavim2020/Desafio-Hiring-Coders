@@ -3,10 +3,13 @@ import styled from 'styled-components';
 
 
 export const HeaderContainer = styled.header`
+    position: sticky;
+    top: 0%;
     width: 100vw;
     height: 4.5vw;
     background-color: #FFCEE0;
     font-family: var(--font);
+    z-index: 100;
 
     @media(max-width: 960px){
         height: 12vw;
