@@ -196,7 +196,7 @@ const BlackFriday = () => {
             image: `${Celular}`,
         };
 
-        car.push(...car, cell);
+        car.push(cell);
         setCountCompras(countCompras + 1)
     }
 

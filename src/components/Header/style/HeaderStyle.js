@@ -105,12 +105,14 @@ export const DivTextAndCar = styled.nav`
         .compras{
             width: 20vw;
             height: max-content;
+            max-height: 98vh;
             position: absolute;
             top: 0%;
             right: 0%;
             background-color: var(--white);
             z-index: 12;
             box-sizing: content-box;
+            overflow-y: auto;
 
             &:hover{
                 border: 0.16vw solid var(--dark-blue);
